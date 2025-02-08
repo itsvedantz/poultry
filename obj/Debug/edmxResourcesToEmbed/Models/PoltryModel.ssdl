@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PoultryDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\POULTRYFORMMANAGEMENTSYSTEM\APP_DATA\POULTRYDATA.MDF.dbo.TblAdmin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="adminId" />
+      <PropertyRef Name="adminName" />
+      <PropertyRef Name="pass" />
+    </Key>
+    <Property Name="adminId" Type="int" Nullable="false" />
+    <Property Name="adminName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\POULTRYFORMMANAGEMENTSYSTEM\APP_DATA\POULTRYDATA.MDF.dbo.TblRegister' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblRegister">
+    <Key>
+      <PropertyRef Name="cName" />
+      <PropertyRef Name="userName" />
+      <PropertyRef Name="phoneNo" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="city" />
+    </Key>
+    <Property Name="cName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="phoneNo" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\POULTRYFORMMANAGEMENTSYSTEM\APP_DATA\POULTRYDATA.MDF.dbo.TblRequest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblRequest">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="mailId" />
+      <PropertyRef Name="subject" />
+      <PropertyRef Name="message" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mailId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subject" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="message" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PoultryDataModelStoreContainer">
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblAdmin].[adminId] AS [adminId], 
+[TblAdmin].[adminName] AS [adminName], 
+[TblAdmin].[pass] AS [pass]
+FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblRegister" EntityType="Self.TblRegister" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblRegister].[cName] AS [cName], 
+[TblRegister].[userName] AS [userName], 
+[TblRegister].[phoneNo] AS [phoneNo], 
+[TblRegister].[password] AS [password], 
+[TblRegister].[city] AS [city]
+FROM [dbo].[TblRegister] AS [TblRegister]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblRequest" EntityType="Self.TblRequest" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblRequest].[name] AS [name], 
+[TblRequest].[mailId] AS [mailId], 
+[TblRequest].[subject] AS [subject], 
+[TblRequest].[message] AS [message]
+FROM [dbo].[TblRequest] AS [TblRequest]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

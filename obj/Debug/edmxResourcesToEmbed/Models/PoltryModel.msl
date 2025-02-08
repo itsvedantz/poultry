@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PoultryDataModelStoreContainer" CdmEntityContainer="PoultryDataEntities">
+    <EntitySetMapping Name="TblAdmins">
+      <EntityTypeMapping TypeName="PoultryDataModel.TblAdmin">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+          <ScalarProperty Name="adminName" ColumnName="adminName" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRegisters">
+      <EntityTypeMapping TypeName="PoultryDataModel.TblRegister">
+        <MappingFragment StoreEntitySet="TblRegister">
+          <ScalarProperty Name="cName" ColumnName="cName" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="city" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRequests">
+      <EntityTypeMapping TypeName="PoultryDataModel.TblRequest">
+        <MappingFragment StoreEntitySet="TblRequest">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mailId" ColumnName="mailId" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
